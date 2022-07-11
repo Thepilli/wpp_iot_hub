@@ -34,25 +34,25 @@ for i in files:
 
 ############################################################################################################
 
-import pandas as pd
-
-
-df = pd.read_json("C:\\Users\\jiri.pillar\\Downloads\\06\\18\\00\\49.json", lines=True)
-df = pd.concat([df1,df2])
-
-
-df = pd.DataFrame()
-df_con = pd.DataFrame()
-for i in files:
-    df = pd.read_json(i, lines=True)
-    df_con=pd.concat([df_con,df])
-
-##takes one file and adds each line to the list
-iotList = []
-with open('C:\\Users\\jiri.pillar\\Downloads\\06\\18\\00\\49.json') as f:
-    for jsonObj in f:
-        iotDict = json.loads(jsonObj)
-        iotList.append(iotDict)
+# import pandas as pd
+#
+#
+# df = pd.read_json("C:\\Users\\jiri.pillar\\Downloads\\06\\18\\00\\49.json", lines=True)
+# df = pd.concat([df1,df2])
+#
+#
+# df = pd.DataFrame()
+# df_con = pd.DataFrame()
+# for i in files:
+#     df = pd.read_json(i, lines=True)
+#     df_con=pd.concat([df_con,df])
+#
+# ##takes one file and adds each line to the list
+# iotList = []
+# with open('C:\\Users\\jiri.pillar\\Downloads\\06\\18\\00\\49.json') as f:
+#     for jsonObj in f:
+#         iotDict = json.loads(jsonObj)
+#         iotList.append(iotDict)
 
 
 # convert-unix-timestamp-to-str-and-str-to-unix-timestamp-in-python
