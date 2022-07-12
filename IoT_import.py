@@ -75,3 +75,45 @@ result_list = list(result.values())
 combine = result_list[0] + result_list[1]
 with open("input_iot.json", "w") as outfile:
     json.dump(combine, outfile)
+
+
+########################################################################################################################
+
+
+###List the blobs in your container
+
+from azure.storage.blob import ContainerClient
+
+container = ContainerClient.from_connection_string(conn_str='DefaultEndpointsProtocol=https;AccountName=sttemperaturetestweu001;AccountKey=iCAkFc6T8XcqyP23FRaT8Nd9mjrgwVUsfxP1IpJa1CfDRnAm3SpDI68nrXFAFmd5sPk852KlNf42+AStRg8PYw==;EndpointSuffix=core.windows.net', container_name = 'ci-temperature-test-weu-001')
+for blob in container.list_blobs():
+    print(f'{blob.name} : {blob.last_modified}')
+
+
+###Download a blob from your container
+
+from azure.storage.blob import BlobClient
+
+blob = BlobClient.from_connection_string(conn_str='DefaultEndpointsProtocol=https;AccountName=sttemperaturetestweu001;AccountKey=iCAkFc6T8XcqyP23FRaT8Nd9mjrgwVUsfxP1IpJa1CfDRnAm3SpDI68nrXFAFmd5sPk852KlNf42+AStRg8PYw==;EndpointSuffix=core.windows.net', container_name = 'ci-temperature-test-weu-001', blob_name="iot-temperature-test-weu-001/01/2022/07/01/11/49.json")
+with open("./BlockDestination.txt", "wb") as my_blob:
+    blob_data = blob.download_blob()
+    blob_data.readinto(my_blob)
+
+
+from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
+import json
+
+'DefaultEndpointsProtocol=https;AccountName=sttemperaturetestweu001;AccountKey=iCAkFc6T8XcqyP23FRaT8Nd9mjrgwVUsfxP1IpJa1CfDRnAm3SpDI68nrXFAFmd5sPk852KlNf42+AStRg8PYw==;EndpointSuffix=core.windows.net'
+
+container = ContainerClient.from_connection_string(conn_str='DefaultEndpointsProtocol=https;'
+                                                            'AccountName=sttemperaturetestweu001;'
+                                                            'AccountKey=iCAkFc6T8XcqyP23FRaT8Nd9mjrgwVUsfxP1IpJa1CfDRnAm3SpDI68nrXFAFmd5sPk852KlNf42+AStRg8PYw==;'
+                                                            'EndpointSuffix=core.windows.net',
+                                                   container_name='ci-temperature-test-weu-001')
+
+blob = BlobClient.from_connection_string(conn_str='DefaultEndpointsProtocol=https;'
+                                                  'AccountName=sttemperaturetestweu001;'
+                                                  'AccountKey=iCAkFc6T8XcqyP23FRaT8Nd9mjrgwVUsfxP1IpJa1CfDRnAm3SpDI68nrXFAFmd5sPk852KlNf42+AStRg8PYw==;'
+                                                  'EndpointSuffix=core.windows.net',
+                                         container_name='ci-temperature-test-weu-001',
+                                         blob_name="iot-temperature-test-weu-001/01/2022/07/01/11/49.json")
+
