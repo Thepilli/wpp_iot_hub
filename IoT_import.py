@@ -44,8 +44,7 @@ def list_files(dir):
 directory = "C:\\Users\\jiri.pillar\\Downloads\\2022"
 files = list_files(directory)
 del files[0:6]
-for i in files:
-    print(i)
+print(files[-1])
 
 iotList = []
 for i in files:
@@ -73,7 +72,7 @@ for d in iotList:
     result[d['Body']['imsi']].append(d)
 result_list = list(result.values())
 combine = result_list[0] + result_list[1]
-with open("input_iot.json", "w") as outfile:
+with open("input_iot_7_13.json", "w") as outfile:
     json.dump(combine, outfile)
 
 
