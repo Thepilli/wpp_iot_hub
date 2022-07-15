@@ -72,7 +72,7 @@ for d in iotList:
     result[d['Body']['imsi']].append(d)
 result_list = list(result.values())
 combine = result_list[0] + result_list[1]
-with open("input_iot_7_14.json", "w") as outfile:
+with open("input_iot.json", "w") as outfile:
     json.dump(combine, outfile)
 
 
