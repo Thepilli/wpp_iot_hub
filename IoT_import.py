@@ -116,3 +116,19 @@ blob = BlobClient.from_connection_string(conn_str='DefaultEndpointsProtocol=http
                                          container_name='ci-temperature-test-weu-001',
                                          blob_name="iot-temperature-test-weu-001/01/2022/07/01/11/49.json")
 
+from azure.storage.blob import BlobServiceClient
+
+STORAGEACCOUNTURL = "https://sttemperaturetestweu001.blob.core.windows.net"
+STORAGEACCOUNTKEY = "iCAkFc6T8XcqyP23FRaT8Nd9mjrgwVUsfxP1IpJa1CfDRnAm3SpDI68nrXFAFmd5sPk852KlNf42+AStRg8PYw==;"
+CONTAINERNAME = "ci-temperature-test-weu-001"
+BLOBNAME = "iot-temperature-test-weu-001/01/2022/07/01/11/49.json"
+
+blob_service_client_instance = BlobServiceClient(
+    account_url=STORAGEACCOUNTURL, credential=STORAGEACCOUNTKEY)
+
+blob_client_instance = blob_service_client_instance.get_blob_client(
+    CONTAINERNAME, BLOBNAME, snapshot=None)
+
+blob_data = blob_client_instance.download_blob()
+data = blob_data.readall()
+print(data)
