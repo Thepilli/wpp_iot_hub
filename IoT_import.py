@@ -41,7 +41,7 @@ def list_files(dir):
     return r
 
 
-directory = "C:\\Users\\jiri.pillar\\Downloads\\2022"
+directory = "C:\\Users\\jiri.pillar\\Downloads\\2022\\iot-temperature-test-weu-001"
 files = list_files(directory)
 del files[0:6]
 print(files[-1])
