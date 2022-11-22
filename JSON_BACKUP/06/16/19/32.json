@@ -1,0 +1,40 @@
+{"EnqueuedTimeUtc":"2022-06-16T19:32:29.9450000Z","Properties":{},"SystemProperties":{"connectionDeviceId":"901288002989991","connectionAuthMethod":"{\"scope\":\"device\",\"type\":\"sas\",\"issuer\":\"iothub\",\"acceptingIpFilterRule\":null}","connectionDeviceGenerationId":"637909662877731942","contentType":"application/json","contentEncoding":"utf-8","enqueuedTime":"2022-06-16T19:32:29.9450000Z"},"Body":{
+"imsi": 901288002989991,
+"sequence": 188,
+"uptime": 689414,
+"temperature": [
+{
+"value": 24.12,
+"timestamp": 1655189400000
+},
+{
+"value": 43,
+"timestamp": 1655192700000
+}
+],
+"orientation": 1,
+"discharged": 0,
+"ecl": 1,
+"signal_power": -89.7,
+"snr": 3.3
+}}
+{"EnqueuedTimeUtc":"2022-06-16T19:33:06.1870000Z","Properties":{},"SystemProperties":{"connectionDeviceId":"901288002989997","connectionAuthMethod":"{\"scope\":\"device\",\"type\":\"sas\",\"issuer\":\"iothub\",\"acceptingIpFilterRule\":null}","connectionDeviceGenerationId":"637909662688020549","contentType":"application/json","contentEncoding":"utf-8","enqueuedTime":"2022-06-16T19:33:06.1870000Z"},"Body":{
+"imsi": 901288002989997,
+"sequence": 188,
+"uptime": 689414,
+"temperature": [
+{
+"value": 24.12,
+"timestamp": 1655189400000
+},
+{
+"value": 43,
+"timestamp": 1655192700000
+}
+],
+"orientation": 1,
+"discharged": 0,
+"ecl": 1,
+"signal_power": -89.7,
+"snr": 3.3
+}}

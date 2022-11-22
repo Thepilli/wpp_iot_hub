@@ -1,0 +1,134 @@
+{"EnqueuedTimeUtc":"2022-06-17T06:25:22.2020000Z","Properties":{},"SystemProperties":{"connectionDeviceId":"901288002989991","connectionAuthMethod":"{\"scope\":\"device\",\"type\":\"sas\",\"issuer\":\"iothub\",\"acceptingIpFilterRule\":null}","connectionDeviceGenerationId":"637909662877731942","contentType":"application/json","contentEncoding":"utf-8","enqueuedTime":"2022-06-17T06:25:22.2020000Z"},"Body":{
+  "temperatureSensor": [
+    {
+      "sensorId": 0,
+      "location": "Baltimore",
+      "healthy": false,
+      "data": [
+		{
+			"date": "2019-09-08",
+			"time": "02:10",
+			"temperature": "53.46 °C"
+		},
+		{
+			"date": "2019-10-31",
+			"time": "04:40",
+			"temperature": "52.07 °C"
+		},
+		{
+			"date": "2019-07-22",
+			"time": "06:04",
+			"temperature": "49.18 °C"
+		}
+	  ]
+    },
+    {
+      "sensorId": 1,
+      "location": "Hillboro",
+      "healthy": true,
+      "data": [
+		{
+			"date": "2019-07-24",
+			"time": "05:47",
+			"temperature": "96.45 °C"
+		},
+		{
+			"date": "2019-04-17",
+			"time": "11:20",
+			"temperature": "27.16 °C"
+		},
+		{
+			"date": "2019-09-15",
+			"time": "10:05",
+			"temperature": "31.150000000000002 °C"
+		}
+	  ]
+    }
+  ],
+  "speedSensor": [
+    {
+      "sensorId": 0,
+	  "coordinates": {
+		"x": 38.12,
+		"y": 24.00
+	  },
+	  "speed": "2,496.00 m/s"
+	},
+    {
+      "sensorId": 1,
+	  "coordinates": {
+		"x": 1.47,
+		"y": 24.03
+	  },
+	  "speed": "3,060.00 m/s"
+	}
+  ]
+}
+}
+{"EnqueuedTimeUtc":"2022-06-17T06:25:36.3910000Z","Properties":{},"SystemProperties":{"connectionDeviceId":"901288002989997","connectionAuthMethod":"{\"scope\":\"device\",\"type\":\"sas\",\"issuer\":\"iothub\",\"acceptingIpFilterRule\":null}","connectionDeviceGenerationId":"637909662688020549","contentType":"application/json","contentEncoding":"utf-8","enqueuedTime":"2022-06-17T06:25:36.3910000Z"},"Body":{
+  "temperatureSensor": [
+    {
+      "sensorId": 0,
+      "location": "Lewisburg",
+      "healthy": true,
+      "data": [
+		{
+			"date": "2019-05-02",
+			"time": "05:14",
+			"temperature": "4.59 °C"
+		},
+		{
+			"date": "2019-09-24",
+			"time": "04:32",
+			"temperature": "33.95 °C"
+		},
+		{
+			"date": "2019-10-22",
+			"time": "04:07",
+			"temperature": "50.59 °C"
+		}
+	  ]
+    },
+    {
+      "sensorId": 1,
+      "location": "Newport",
+      "healthy": true,
+      "data": [
+		{
+			"date": "2019-08-09",
+			"time": "11:19",
+			"temperature": "13.74 °C"
+		},
+		{
+			"date": "2019-08-29",
+			"time": "07:20",
+			"temperature": "51.65 °C"
+		},
+		{
+			"date": "2019-06-30",
+			"time": "05:05",
+			"temperature": "41.89 °C"
+		}
+	  ]
+    }
+  ],
+  "speedSensor": [
+    {
+      "sensorId": 0,
+	  "coordinates": {
+		"x": 49.79,
+		"y": 14.18
+	  },
+	  "speed": "6,703.00 m/s"
+	},
+    {
+      "sensorId": 1,
+	  "coordinates": {
+		"x": -25.43,
+		"y": -7.53
+	  },
+	  "speed": "461.00 m/s"
+	}
+  ]
+}
+}
